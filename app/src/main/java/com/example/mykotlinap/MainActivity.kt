@@ -9,6 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import kotlin.math.pow
 
 class MainActivity : AppCompatActivity() , View.OnClickListener {
 
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
     lateinit var etA : EditText
     lateinit var etB : EditText
     lateinit var resultTv : TextView
-
+    lateinit var power2 : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
         btnSub = findViewById(R.id.btnSub)
         btnMult = findViewById(R.id.btnMult)
         btnDivid = findViewById(R.id.btnDivid)
+        power2 = findViewById((R.id.power2))
         etA = findViewById(R.id.etA)
         etB = findViewById((R.id.etB))
         resultTv = findViewById(R.id.resultTv)
@@ -40,6 +42,7 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
         btnSub.setOnClickListener(this)
         btnMult.setOnClickListener(this)
         btnDivid.setOnClickListener(this)
+        power2.setOnClickListener(this)
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -58,6 +61,7 @@ class MainActivity : AppCompatActivity() , View.OnClickListener {
             R.id.btnSub->{result = a-b}
             R.id.btnMult->{result = a*b}
             R.id.btnDivid->{result = a/b}
+            R.id.power2->{result = a.pow(b)}
 
 
         }

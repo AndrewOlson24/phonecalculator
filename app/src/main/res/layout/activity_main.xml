@@ -12,14 +12,14 @@
     <EditText
         android:id="@+id/etA"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_margin="20dp"
         android:hint="Enter a " />
 
     <EditText
         android:id="@+id/etB"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_margin="20dp"
         android:hint="Enter b " />
 
@@ -27,13 +27,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:text="+" />
 
         <Button
             android:id="@+id/btnSub"
@@ -56,7 +49,21 @@
             android:layout_margin="4dp"
             android:text="/" />
 
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="+" />
+
     </LinearLayout>
+    <Button
+        android:id="@+id/power2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="^" />
+
 
 
     <TextView
@@ -67,4 +74,5 @@
         android:gravity="center"
         android:text="Results"
         android:textSize="25dp" />
+
 </LinearLayout>
